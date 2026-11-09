@@ -1,0 +1,72 @@
+{
+  "note": "Catálogo ficticio de soluciones para el sitio. Sin precios: la inversión se revisa en la demo.",
+  "status": {
+    "disponible": "Disponible",
+    "validacion": "Requiere validación",
+    "desarrollo": "Por desarrollar"
+  },
+  "areas": [
+    {
+      "id": "operacion",
+      "name": "Operación de la clínica",
+      "desc": "Agenda, expediente, inventario y cobros en una sola consola.",
+      "items": [
+        { "id": "agenda", "name": "Agenda y citas", "status": "disponible", "solves": "Citas del equipo y pedidas desde la app en una sola semana.", "includes": "Agenda por profesional, recordatorios y estados de cita.", "depends": "Ninguna." },
+        { "id": "expediente", "name": "Expediente con fotos por cita", "status": "disponible", "solves": "Expedientes en papel y fotos perdidas en teléfonos.", "includes": "Ficha única, fotos ligadas a cada visita y notas del profesional.", "depends": "Ninguna." },
+        { "id": "inventario", "name": "Inventario por lote", "status": "disponible", "solves": "No saber qué hay en bodega ni de qué lote salió cada aplicación.", "includes": "Stock por lote, alertas de stock bajo y pedidos de la app.", "depends": "Catálogo cargado." },
+        { "id": "cobros", "name": "Cobros y facturas internas", "status": "disponible", "solves": "Cobros sueltos fuera de la operación.", "includes": "Cobros por cita o producto y facturas internas. No es factura electrónica fiscal.", "depends": "Agenda o tienda." },
+        { "id": "roles", "name": "Roles y permisos", "status": "disponible", "solves": "Que todo el equipo vea todo.", "includes": "Perfiles para recepción, médicos, administración y dirección.", "depends": "Ninguna." }
+      ]
+    },
+    {
+      "id": "paciente",
+      "name": "Experiencia del paciente",
+      "desc": "La app con el nombre de tu clínica, entre una cita y la siguiente.",
+      "items": [
+        { "id": "app", "name": "App con el nombre de tu clínica", "status": "disponible", "solves": "La relación que se corta al salir de la clínica.", "includes": "App web con tu nombre, logo y catálogo. Una app propia en las tiendas es un alcance aparte.", "depends": "Expediente." },
+        { "id": "rutina", "name": "Rutina y seguimiento", "status": "disponible", "solves": "La rutina que se olvida al llegar a casa.", "includes": "Rutina de mañana y noche, citas, sesiones y progreso en la app.", "depends": "App del paciente." },
+        { "id": "tienda", "name": "Tienda y pedidos desde la app", "status": "disponible", "solves": "Ventas de producto que dependen de la visita.", "includes": "Productos recomendados y pedidos que llegan a Inventario. Hoy no hay pago en línea.", "depends": "App del paciente e inventario." },
+        { "id": "firma", "name": "Ficha firmada desde el teléfono", "status": "validacion", "solves": "Consentimientos en papel que se pierden o no se versionan.", "includes": "Ficha llenada y firmada en la app o en una tablet, guardada por versión.", "depends": "Revisión de validez legal en tu país antes de usarla." }
+      ]
+    },
+    {
+      "id": "analisis",
+      "name": "Análisis facial",
+      "desc": "Proporción, simetría y piel como apoyo a la valoración profesional.",
+      "items": [
+        { "id": "facial", "name": "Análisis facial de 468 puntos", "status": "disponible", "solves": "Explicar proporciones sin una base visual común.", "includes": "Proporción, simetría, lectura de piel por zonas y Glow. Es apoyo, nunca un diagnóstico.", "depends": "App del paciente." },
+        { "id": "plan", "name": "Plan marcado sobre el rostro", "status": "disponible", "solves": "El plan que queda en una hoja.", "includes": "Zonas marcadas que crean líneas del plan visibles en la app.", "depends": "Expediente." },
+        { "id": "reporte", "name": "Reporte para la paciente", "status": "disponible", "solves": "Resultados que no se llevan a casa.", "includes": "Reporte en la app y en la consola, comparable en cada control.", "depends": "Análisis facial." }
+      ]
+    },
+    {
+      "id": "ia",
+      "name": "IA en la consulta",
+      "desc": "Voz y borradores que una persona revisa antes de guardar.",
+      "items": [
+        { "id": "acta", "name": "Acta en borrador desde una nota de voz", "status": "validacion", "solves": "Digitar cada consulta dos veces.", "includes": "Borrador del acta, servicios detectados, revisión humana, stock y factura.", "depends": "Expediente, inventario y cobros. Se valida con tu forma de documentar." },
+        { "id": "voz", "name": "Asistente por voz en la consola", "status": "validacion", "solves": "Registrar sesiones y agendar controles a mano.", "includes": "Instrucciones en lenguaje natural que preparan la acción para confirmar.", "depends": "Agenda y expediente." },
+        { "id": "voz-app", "name": "Asistente por voz en la app", "status": "desarrollo", "solves": "Dudas de la paciente entre citas.", "includes": "Preguntas sobre su rutina y sus citas, con derivación a la clínica.", "depends": "App del paciente." }
+      ]
+    },
+    {
+      "id": "integraciones",
+      "name": "Integraciones",
+      "desc": "Convive con lo que ya te funciona.",
+      "items": [
+        { "id": "crm", "name": "Integración con tu expediente o CRM", "status": "validacion", "solves": "Cambiar un sistema que sí funciona.", "includes": "Sincronización de pacientes, citas o pedidos según lo que permita tu sistema.", "depends": "La API y los permisos de tu sistema. Se confirma antes de prometerla." },
+        { "id": "fe", "name": "Factura electrónica fiscal", "status": "desarrollo", "solves": "Emitir la factura fiscal desde la plataforma.", "includes": "Hoy tu facturación electrónica se conserva en tu sistema.", "depends": "Requisitos fiscales de tu país." },
+        { "id": "tiendas", "name": "App propia en las tiendas", "status": "desarrollo", "solves": "Tener tu app en App Store y Google Play.", "includes": "Publicación con tu cuenta de desarrollador.", "depends": "App del paciente. Es un alcance aparte." }
+      ]
+    },
+    {
+      "id": "visibilidad",
+      "name": "Visibilidad en buscadores e IA",
+      "desc": "Diagnóstico y mejoras verificables, sin prometer posiciones.",
+      "items": [
+        { "id": "geo", "name": "Diagnóstico de visibilidad en IA", "status": "disponible", "solves": "No saber cómo te describen buscadores y asistentes.", "includes": "Lectura de tu sitio y de cómo aparece tu clínica, con un método explícito.", "depends": "Ninguna." },
+        { "id": "mejoras", "name": "Mejoras verificables y medición", "status": "disponible", "solves": "Cambios en el sitio sin forma de medirlos.", "includes": "Ajustes de contenido y datos estructurados, medidos antes y después. Sin prometer posiciones, fechas ni pacientes.", "depends": "Diagnóstico de visibilidad." }
+      ]
+    }
+  ]
+}
