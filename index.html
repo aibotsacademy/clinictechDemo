@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Clinic Management Tech · Tu clínica, tus médicos y tus pacientes, conectados</title>
+  <meta name="description" content="Una plataforma que une la consola de tu clínica con la app de cada paciente: expediente, tratamientos, antes y después, productos, inventario y cobros.">
+  <meta name="theme-color" content="#3F2127">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="/media/hero/000.webp" type="image/webp" fetchpriority="high" media="(prefers-reduced-motion: no-preference)">
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <!-- ===================== Navegación ===================== -->
+  <header class="nav" id="nav">
+    <div class="wrap nav-in">
+      <a class="logo" href="#inicio" aria-label="Clinic Management Tech, inicio"><span class="logo-mark" aria-hidden="true"></span>Clinic Management Tech</a>
+      <nav class="nav-links" aria-label="Principal">
+        <a href="#soluciones">Soluciones</a>
+        <a href="#features">Consola</a>
+        <a href="#paciente">App del paciente</a>
+        <a href="#simulador">Simulador</a>
+        <a href="#faq">Preguntas</a>
+      </nav>
+      <a class="btn btn-primary nav-cta" href="#demo">Agendar una demo <span class="arr" aria-hidden="true">→</span></a>
+      <button class="nav-burger" id="navBurger" type="button" aria-expanded="false" aria-controls="navOverlay" aria-label="Abrir menú"><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="nav-overlay" id="navOverlay" aria-label="Menú" hidden>
+    <a href="#soluciones">Soluciones</a>
+    <a href="#features">Consola</a>
+    <a href="#paciente">App del paciente</a>
+    <a href="#simulador">Simulador</a>
+    <a href="#faq">Preguntas</a>
+    <a class="btn btn-primary" href="#demo">Agendar una demo <span class="arr" aria-hidden="true">→</span></a>
+  </div>
+
+  <div id="telon" aria-hidden="true"><div><span class="logo-mark"></span><div class="telon-name"></div></div></div>
+
+  <main id="contenido" tabindex="-1">
+
+    <!-- ===================== Prólogo del Espejo ===================== -->
+    <section id="inicio" class="eh" data-theme="dark" data-name="Inicio" aria-label="La app del paciente en acción">
+      <div class="eh-sticky">
+        <div class="wrap eh-grid">
+          <div class="eh-text">
+            <div class="eh-copy">
+              <h1 class="h1">Tu clínica, tus médicos y tus pacientes, conectados.</h1>
+              <p class="lead">De la primera consulta al seguimiento del paciente: te ayudamos a ver qué necesita tu clínica y a implementarlo.</p>
+              <div class="btn-row">
+                <a class="btn btn-primary" href="#diagnostico">Diagnosticar mi clínica <span class="arr" aria-hidden="true">→</span></a>
+                <a class="btn btn-secondary" href="#demo">Agendar una demo</a>
+              </div>
+            </div>
+            <div class="eh-chapters" aria-live="polite">
+              <div class="eh-chap" data-frame="0"><h2>Dos fotos, sin complicaciones.</h2><p>La app guía a la paciente y toma las fotos sola.</p></div>
+              <div class="eh-chap" data-frame="38"><h2>468 puntos sobre su rostro.</h2><p>La base para documentar y explicar cada proporción.</p></div>
+              <div class="eh-chap" data-frame="50"><h2>Proporción y simetría.</h2><p>Un apoyo para la valoración profesional, nunca un diagnóstico.</p></div>
+              <div class="eh-chap" data-frame="62"><h2>La piel, zona por zona.</h2><p>Tono, textura y uniformidad, explicados en simple.</p></div>
+              <div class="eh-chap" data-frame="100"><h2>Su punto de partida.</h2><p>Un número para comparar en cada control.</p></div>
+              <div class="eh-chap" data-frame="113"><h2>Un reporte que se queda con ella.</h2><p>Y que tu clínica ve en la consola.</p></div>
+            </div>
+          </div>
+
+          <div class="eh-center">
+            <div id="ehPhone">
+              <div class="eh-frame">
+                <canvas id="ehCanvas" width="560" height="1218" role="img" aria-label="Grabación de la app del paciente: una persona ficticia toma dos fotos, la app marca 468 puntos en su rostro, mide proporción y simetría, analiza la piel por zonas, calcula su Glow de 84 y muestra el reporte."></canvas>
+                <canvas id="ehLens" width="320" height="320" aria-hidden="true"></canvas>
+                <video id="ehVideo" muted playsinline loop controls preload="none" poster="/media/espejo-app.jpg" aria-label="Grabación de la app del paciente con una persona ficticia">
+                  <source src="/media/espejo-app.webm" type="video/webm">
+                  <source src="/media/espejo-app.mp4" type="video/mp4">
+                </video>
+                <span class="eh-fict">Persona ficticia</span>
+              </div>
+            </div>
+            <div class="eh-glow" aria-hidden="true"><b>84</b><span>Glow</span></div>
+          </div>
+
+          <div class="eh-side">
+            <nav class="eh-nav" aria-label="Capítulos de la grabación">
+              <button type="button" data-chap="0">Dos fotos</button>
+              <button type="button" data-chap="1">468 puntos</button>
+              <button type="button" data-chap="2">Proporción</button>
+              <button type="button" data-chap="3">Piel</button>
+              <button type="button" data-chap="4">Glow</button>
+              <button type="button" data-chap="5">Reporte</button>
+            </nav>
+            <div class="eh-range">
+              <label for="ehRange">Mueve la grabación</label>
+              <input id="ehRange" type="range" min="0" max="1000" step="1" value="0">
+            </div>
+            <p class="eh-note">Grabación de la app en un simulador. La persona es ficticia, generada con IA, y la lectura de la cámara está simulada. El recorrido va acelerado.</p>
+          </div>
+        </div>
+        <div id="ehDots" aria-hidden="true"></div>
+        <div class="eh-curtain" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ===================== Hero consola + app ===================== -->
+    <section id="top" class="hero" data-name="La plataforma" aria-labelledby="topTitle">
+      <div id="heroPin">
+        <div class="wrap hero-in">
+          <div class="hero-copy">
+          <div id="heroText">
+            <h2 class="h1 hl-in" id="topTitle">Lo que pasa en la clínica llega a su paciente.</h2>
+            <p class="lead hl-in">Una plataforma que une la consola de tu clínica con la app de cada paciente: expediente, tratamientos, antes y después, productos, inventario y cobros.</p>
+            <div class="btn-row hl-in">
+              <a class="btn btn-primary" href="#diagnostico">Diagnosticar mi clínica <span class="arr" aria-hidden="true">→</span></a>
+              <a class="btn btn-secondary" href="#simulador">Probar el simulador</a>
+            </div>
+          </div>
+          <div id="heroEnd">
+            <p>Una plataforma, dos pantallas y una sola historia por paciente.</p>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="#diagnostico">Diagnosticar mi clínica <span class="arr" aria-hidden="true">→</span></a>
+              <a class="btn btn-secondary" href="#demo">Agendar una demo</a>
+            </div>
+          </div>
+          </div>
+          <div id="stage" aria-hidden="true">
+            <div id="heroConsole"></div>
+            <div id="heroPhone"></div>
+            <svg id="heroLines">
+              <path id="ln1" pathLength="1"/><path id="ln2" pathLength="1"/><path id="ln3" pathLength="1"/>
+              <circle id="ln1a" r="4"/><circle id="ln1b" r="4"/><circle id="ln2a" r="4"/><circle id="ln2b" r="4"/><circle id="ln3a" r="4"/><circle id="ln3b" r="4"/>
+            </svg>
+          </div>
+        </div>
+        <div class="wrap hero-foot">
+          <ol class="hsteps" aria-label="Recorrido">
+            <li class="hstep on"><span class="bar"><i></i></span><b>01</b>La promesa</li>
+            <li class="hstep"><span class="bar"><i></i></span><b>02</b>El tratamiento viaja</li>
+            <li class="hstep"><span class="bar"><i></i></span><b>03</b>Antes y después</li>
+            <li class="hstep"><span class="bar"><i></i></span><b>04</b>Compra e indicadores</li>
+          </ol>
+          <span class="hero-note">Datos ficticios</span>
+        </div>
+      </div>
+
+      <div class="wrap hero-mobile">
+        <article class="hm-step reveal">
+          <h3><b>01</b>La promesa</h3>
+          <p>La consola de tu clínica y la app de cada paciente, en la misma plataforma.</p>
+          <div class="hm-pair"><div data-console="hoy"></div><div data-patient="inicio"></div></div>
+        </article>
+        <article class="hm-step reveal">
+          <h3><b>02</b>El tratamiento viaja</h3>
+          <p>Lo que prescribes en la ficha aparece en Citas y tratamientos de su app.</p>
+          <div class="hm-pair"><div data-console="tratamientos" data-zoom="1.5" data-origin="100% 25%"></div><div data-patient="citas"></div></div>
+        </article>
+        <article class="hm-step reveal">
+          <h3><b>03</b>Antes y después</h3>
+          <p>La evolución queda en la ficha y la paciente la ve en Mi progreso.</p>
+          <div class="hm-pair"><div data-console="pacientes" data-zoom="1.6" data-origin="88% 50%"></div><div data-patient="progreso"></div></div>
+        </article>
+        <article class="hm-step reveal">
+          <h3><b>04</b>Compra e indicadores</h3>
+          <p>Lo que compra en la tienda de su app llega a Inventario y mueve tus indicadores.</p>
+          <div class="hm-pair"><div data-console="inventario" data-zoom="1.15" data-origin="100% 10%"></div><div data-patient="tienda"></div></div>
+        </article>
+        <p class="note">Datos ficticios</p>
+      </div>
+    </section>
+
+    <!-- ===================== Tesis ===================== -->
+    <section id="tesis" class="tesis dark" data-theme="dark" data-name="La idea" aria-label="La idea">
+      <div class="wrap">
+        <p class="reveal">La experiencia premium no termina cuando el paciente sale de la clínica. <em>Sigue en su mano.</em></p>
+      </div>
+    </section>
+
+    <!-- ===================== Roles ===================== -->
+    <section id="roles" class="section porcelain" data-name="Roles" aria-labelledby="rolesTitle">
+      <div class="wrap">
+        <h2 class="h2 reveal" id="rolesTitle">Cada persona de tu clínica trabaja en el mismo lugar.</h2>
+        <div class="roles-grid">
+          <article class="role-card reveal" style="--i:0">
+            <h3 class="h3">La clínica</h3>
+            <ul><li>Agenda, catálogo e inventario por lote</li><li>Cobros y facturas internas</li><li>Roles y permisos para cada persona</li></ul>
+          </article>
+          <article class="role-card reveal" style="--i:1">
+            <h3 class="h3">El médico</h3>
+            <ul><li>Expediente y fotos en la misma cita</li><li>Plan marcado sobre el rostro</li><li>Acta en borrador desde una nota de voz</li></ul>
+          </article>
+          <article class="role-card reveal" style="--i:2">
+            <h3 class="h3">El paciente</h3>
+            <ul><li>Su análisis facial y su reporte</li><li>Rutina, citas y progreso en su app</li><li>Ficha firmada desde su teléfono</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Cambio ===================== -->
+    <section id="cambio" class="section blush" data-name="El cambio" aria-labelledby="cambioTitle">
+      <div class="wrap">
+        <h2 class="h2 reveal" id="cambioTitle">¿Tu clínica depende de que alguien se acuerde?</h2>
+        <div class="cmp-grid">
+          <div class="cmp cmp-without reveal" style="--i:0">
+            <h3>Sin una plataforma</h3>
+            <ul>
+              <li>Expedientes en papel o archivos sueltos</li>
+              <li>Fotos de antes y después perdidas en teléfonos</li>
+              <li>El plan del rostro queda en una hoja</li>
+              <li>Cada consulta se digita dos veces</li>
+              <li>La rutina se olvida al salir de la clínica</li>
+            </ul>
+          </div>
+          <div class="cmp cmp-with reveal" style="--i:1" data-theme="dark">
+            <h3>Con Clinic Management Tech</h3>
+            <ul>
+              <li>Expediente único con fotos y análisis</li>
+              <li>Fotos ligadas a cada cita</li>
+              <li>Plan marcado que la paciente ve en su app</li>
+              <li>De la nota de voz al acta, el stock y la factura</li>
+              <li>Rutina en la app de cada paciente</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Soluciones ===================== -->
+    <section id="soluciones" class="section dark" data-theme="dark" data-name="Soluciones" aria-labelledby="solTitle">
+      <div class="wrap">
+        <h2 class="h2 reveal" id="solTitle">Lo que tu clínica necesita, no un paquete.</h2>
+        <p class="lead reveal" style="--i:1">Puede ser una solución puntual, una combinación o una implementación por etapas. La combinación sale de tu diagnóstico y convive con lo que ya te funciona.</p>
+        <div class="sol-grid">
+          <div class="sol-areas" id="solAreas" role="tablist" aria-label="Áreas" aria-orientation="vertical"></div>
+          <div id="solPanels" class="sol-panels"></div>
+        </div>
+        <p class="note sol-note reveal">Cada solución dice si está disponible, si requiere validación o si hay que desarrollarla. No vendemos como listo lo que no lo está.</p>
+      </div>
+    </section>
+
+    <!-- ===================== Cómo se conectan ===================== -->
+    <section id="como" class="section blush" data-name="Cómo se conectan" aria-labelledby="comoTitle">
+      <div class="wrap">
+        <h2 class="h2 reveal" id="comoTitle">Cómo se conectan clínica y paciente.</h2>
+        <p class="lead reveal" style="--i:1">Lo que la clínica hace en la consola llega a la app de su paciente, y lo que el paciente hace en su app vuelve a la consola.</p>
+        <div class="tabs reveal" role="tablist" aria-label="Recorridos" id="comoTabs">
+          <button class="tab" role="tab" id="ct0" aria-controls="cp0" aria-selected="true" tabindex="0" data-console="tratamientos" data-zoom="1.4" data-origin="100% 20%" data-app="citas">Prescribir tratamiento</button>
+          <button class="tab" role="tab" id="ct1" aria-controls="cp1" aria-selected="false" tabindex="-1" data-console="pacientes" data-zoom="1.4" data-origin="88% 45%" data-app="progreso">Antes y después</button>
+          <button class="tab" role="tab" id="ct2" aria-controls="cp2" aria-selected="false" tabindex="-1" data-console="tratamientos" data-zoom="1.6" data-origin="100% 95%" data-app="rutina">Rutina de skincare</button>
+          <button class="tab" role="tab" id="ct3" aria-controls="cp3" aria-selected="false" tabindex="-1" data-console="inventario" data-zoom="1.3" data-origin="70% 10%" data-app="tienda">Compra en la tienda</button>
+        </div>
+        <div class="como-grid">
+          <div class="como-copy">
+            <div class="como-panel" role="tabpanel" id="cp0" aria-labelledby="ct0"><h3 class="h3">La clínica prescribe desde la ficha</h3><p>En la consola, Prescribir agrega el plan a la ficha de la paciente. En su app aparece en Citas y tratamientos, sesión por sesión.</p></div>
+            <div class="como-panel" role="tabpanel" id="cp1" aria-labelledby="ct1" hidden><h3 class="h3">La evolución queda en la ficha</h3><p>Cada visita se guarda en la ficha, ordenada en antes y después. La paciente ve la comparación en Mi progreso, junto a la nota de su especialista.</p></div>
+            <div class="como-panel" role="tabpanel" id="cp2" aria-labelledby="ct2" hidden><h3 class="h3">La rutina indicada en consulta, en su app</h3><p>Desde la ficha, la clínica indica los productos de la rutina en casa. La paciente la sigue en Mi rutina, mañana y noche.</p></div>
+            <div class="como-panel" role="tabpanel" id="cp3" aria-labelledby="ct3" hidden><h3 class="h3">Lo que se compra en la app aparece en Inventario</h3><p>La paciente compra en la tienda de su app los productos que su clínica recomienda. La consola lo recibe en Pedidos de la app.</p></div>
+          </div>
+          <div class="como-stage" aria-hidden="true">
+            <div class="mask"><div id="comoConsole"></div></div>
+            <div class="phone-slot mask"><div id="comoPhone"></div></div>
+            <svg class="jline" id="jLineSvg"><path id="jLine" pathLength="1"/></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Consola ===================== -->
+    <section id="features" class="section dark" data-theme="dark" data-name="La consola" aria-labelledby="featTitle">
+      <div class="wrap">
+        <h2 class="h2 reveal" id="featTitle">Todo lo que la clínica necesita, en una sola consola.</h2>
+        <p class="lead reveal" style="--i:1">Agenda, expediente, tratamientos, inventario y facturación, conectados con la app de cada paciente.</p>
+        <div class="feat-grid">
+          <div class="feat-list" role="tablist" aria-label="Módulos de la consola" aria-orientation="vertical" id="featList">
+            <button class="feat-item" role="tab" aria-selected="true" tabindex="0" aria-controls="featStage" data-screen="hoy"><span class="fi-name">Hoy</span><span class="fi-desc">Las citas del día, la siguiente paciente y las ventas de la semana.</span></button>
+            <button class="feat-item" role="tab" aria-selected="false" tabindex="-1" aria-controls="featStage" data-screen="agenda"><span class="fi-name">Agenda</span><span class="fi-desc">La semana de la clínica, con las citas que piden desde la app.</span></button>
+            <button class="feat-item" role="tab" aria-selected="false" tabindex="-1" aria-controls="featStage" data-screen="pacientes"><span class="fi-name">Pacientes</span><span class="fi-desc">El expediente de cada paciente y su evolución.</span></button>
+            <button class="feat-item" role="tab" aria-selected="false" tabindex="-1" aria-controls="featStage" data-screen="tratamientos"><span class="fi-name">Tratamientos</span><span class="fi-desc">Prescribir, registrar sesiones y enviar la rutina a la app.</span></button>
+            <button class="feat-item" role="tab" aria-selected="false" tabindex="-1" aria-controls="featStage" data-screen="catalogo"><span class="fi-name">Catálogo</span><span class="fi-desc">Los tratamientos y productos que se muestran en la app.</span></button>
+            <button class="feat-item" role="tab" aria-selected="false" tabindex="-1" aria-controls="featStage" data-screen="inventario"><span class="fi-name">Inventario</span><span class="fi-desc">Indicadores, pedidos de la app y stock de cada producto.</span></button>
+            <button class="feat-item" role="tab" aria-selected="false" tabindex="-1" aria-controls="featStage" data-screen="facturas"><span class="fi-name">Facturas</span><span class="fi-desc">La facturación y los cobros, junto a la operación.</span></button>
+          </div>
+          <div class="feat-stage" id="featStage" role="tabpanel" aria-label="Vista de la consola"><div id="featConsole" class="reveal"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Historias ===================== -->
+    <section id="historias" class="section porcelain" data-name="Historias" aria-labelledby="histTitle">
+      <div class="wrap">
+        <h2 class="h2 reveal" id="histTitle">Tres momentos que hoy se pierden en papel.</h2>
+
+        <article class="story">
+          <div class="reveal">
+            <h3 class="h3">De la nota de voz a la factura.</h3>
+            <p>El médico dicta. La IA prepara el borrador del acta y una persona lo revisa. Al aprobarlo, baja el stock y nace la factura.</p>
+          </div>
+          <div class="story-demo reveal" style="--i:1" id="acta">
+            <div class="acta-pills" role="group" aria-label="Pasos del acta">
+              <button type="button" class="acta-pill" aria-pressed="true" data-step="0">Nota de voz</button>
+              <button type="button" class="acta-pill" aria-pressed="false" data-step="1">Borrador</button>
+              <button type="button" class="acta-pill" aria-pressed="false" data-step="2">Servicios</button>
+              <button type="button" class="acta-pill" aria-pressed="false" data-step="3">Revisión</button>
+              <button type="button" class="acta-pill" aria-pressed="false" data-step="4">Factura</button>
+            </div>
+            <p class="acta-text" aria-live="polite">«Aplicamos toxina en frente y entrecejo, sin reacciones.»</p>
+            <div class="acta-ctrl"><button type="button" class="chip-btn" id="actaNext">Siguiente paso</button></div>
+          </div>
+        </article>
+
+        <article class="story">
+          <div class="reveal">
+            <h3 class="h3">El plan se marca sobre el rostro.</h3>
+            <p>Cada punto crea una línea del plan, y la paciente la ve en su app. Toca una zona para probarlo.</p>
+          </div>
+          <div class="story-demo reveal" style="--i:1">
+            <div class="plan">
+              <div class="plan-face">
+                <span class="sil" aria-hidden="true"></span>
+                <span class="sil-line" aria-hidden="true"></span>
+                <button type="button" class="plan-dot" style="left:52%;top:22%" aria-pressed="false" data-zone="Frente" data-tx="Toxina botulínica" aria-label="Frente: toxina botulínica"></button>
+                <button type="button" class="plan-dot" style="left:72%;top:54%" aria-pressed="false" data-zone="Pómulo" data-tx="Bioestimulador" aria-label="Pómulo: bioestimulador"></button>
+                <button type="button" class="plan-dot" style="left:51%;top:76%" aria-pressed="false" data-zone="Labios" data-tx="Ácido hialurónico" aria-label="Labios: ácido hialurónico"></button>
+                <button type="button" class="plan-dot" style="left:51%;top:91%" aria-pressed="false" data-zone="Mentón" data-tx="Ácido hialurónico" aria-label="Mentón: ácido hialurónico"></button>
+              </div>
+              <div class="plan-list">
+                <h4>Plan de la paciente</h4>
+                <div aria-live="polite" id="planOut"><p class="empty">Toca una zona para agregarla.</p></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="story">
+          <div class="reveal">
+            <h3 class="h3">La ficha se firma una vez.</h3>
+            <p>La paciente la llena y firma en su app o en una tablet en recepción, y queda guardada por versión.</p>
+          </div>
+          <div class="story-demo sign reveal" style="--i:1">
+            <canvas id="signPad" width="640" height="220" aria-label="Área de firma de prueba" role="img"></canvas>
+            <div class="sign-ctrl">
+              <span class="sign-status" id="signStatus" aria-live="polite">Firma con el dedo o el cursor.</span>
+              <button type="button" class="chip-btn" id="signClear">Borrar</button>
+            </div>
+            <p class="note" style="margin-top:10px">Prueba sin valor legal. No se guarda nada.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== App del paciente ===================== -->
+    <section id="paciente" class="section porcelain" data-name="App del paciente" aria-labelledby="pacTitle">
+      <div class="wrap">
+        <h2 class="h2 reveal" id="pacTitle">La relación sigue entre una cita y la siguiente.</h2>
+        <p class="lead reveal" style="--i:1">Cada paciente tiene una app que lleva el nombre y el catálogo de su clínica.</p>
+        <div class="pac-grid">
+          <ul class="benefits">
+            <li class="reveal" style="--i:0"><h3>Su rutina de skincare</h3><p>Los productos que indicó su clínica, mañana y noche.</p></li>
+            <li class="reveal" style="--i:1"><h3>Sus citas y tratamientos</h3><p>Cada cita y cada sesión, en orden.</p></li>
+            <li class="reveal" style="--i:2"><h3>Su progreso</h3><p>Su antes y después, con la nota de su especialista.</p></li>
+            <li class="reveal" style="--i:3"><h3>La tienda de su clínica</h3><p>Los productos recomendados, sin salir de la app.</p></li>
+          </ul>
+          <div class="pac-phone" id="pacPhoneBox">
+            <div data-tilt id="pacPhone"></div>
+          </div>
+          <div class="vtabs" role="tablist" aria-label="Pantallas de la app" aria-orientation="vertical" id="pacTabs">
+            <button class="vtab" role="tab" aria-selected="true" tabindex="0" aria-controls="pacPhone" data-screen="inicio"><span class="vt-arr" aria-hidden="true">→</span>Inicio</button>
+            <button class="vtab" role="tab" aria-selected="false" tabindex="-1" aria-controls="pacPhone" data-screen="rutina"><span class="vt-arr" aria-hidden="true">→</span>Mi rutina</button>
+            <button class="vtab" role="tab" aria-selected="false" tabindex="-1" aria-controls="pacPhone" data-screen="citas"><span class="vt-arr" aria-hidden="true">→</span>Citas y tratamientos</button>
+            <button class="vtab" role="tab" aria-selected="false" tabindex="-1" aria-controls="pacPhone" data-screen="progreso"><span class="vt-arr" aria-hidden="true">→</span>Mi progreso</button>
+            <button class="vtab" role="tab" aria-selected="false" tabindex="-1" aria-controls="pacPhone" data-screen="tienda"><span class="vt-arr" aria-hidden="true">→</span>Tienda</button>
+          </div>
+        </div>
+        <p class="note pac-note">«Clínica Ejemplo» es un nombre ficticio: cada app lleva el nombre de su clínica.</p>
+      </div>
+    </section>
+
+    <!-- ===================== Simulador ===================== -->
+    <section id="simulador" class="section teal" data-theme="dark" data-name="Simulador" aria-labelledby="simTitle">
+      <div class="wrap">
+        <h2 class="h2 reveal" id="simTitle">Pruébalo en las dos pantallas.</h2>
+        <p class="lead reveal" style="--i:1">Prescribe desde Tratamientos o compra en la Tienda y mira qué cambia del otro lado.</p>
+        <div class="sim-grid" id="simGrid">
+          <div id="simConsole"></div>
+          <div id="simPhone"></div>
+          <svg class="sim-cable" id="simCableSvg" aria-hidden="true"><path id="simCable" pathLength="1"/></svg>
+        </div>
+        <div class="sim-log">
+          <div>
+            <h3>Lo que acaba de pasar</h3>
+            <div id="simLog" aria-live="polite"><p class="empty">Todavía no hay acciones. Prescribe un tratamiento o compra en la tienda.</p></div>
+          </div>
+          <button type="button" class="chip-btn" id="simReset">Reiniciar simulación</button>
+        </div>
+        <p class="note sim-note">Simulación con datos ficticios. Nada se guarda ni se envía.</p>
+      </div>
+    </section>
+
+    <!-- ===================== Conversa ===================== -->
+    <section id="conversa" class="section porcelain" data-name="Por voz" aria-labelledby="convTitle">
+      <div class="wrap center">
+        <h2 class="h2 reveal" id="convTitle">Le hablas a la plataforma y ella prepara el resto.</h2>
+        <p class="lead reveal" style="--i:1">Desde la consola o desde la app, la clínica y su paciente usan su voz.</p>
+        <div class="voice reveal" style="--i:2">
+          <span class="voice-mic" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+          </span>
+          <p class="voice-quote">«Registra la sesión de hoy y agenda el control en dos semanas.»</p>
+          <span class="wave" id="wave" aria-hidden="true"></span>
+        </div>
+        <ul class="voice-results reveal" style="--i:3">
+          <li>Sesión lista para confirmar</li>
+          <li>Control propuesto en la agenda</li>
+          <li>Una persona revisa y guarda</li>
+        </ul>
+        <div class="cols3" style="text-align:left">
+          <div class="reveal" style="--i:0"><h3>Entiende lenguaje clínico</h3><p>No necesitas comandos exactos. Interpreta instrucciones naturales del personal médico y administrativo.</p></div>
+          <div class="reveal" style="--i:1"><h3>Prepara la acción</h3><p>Abre la cita o el registro ya lleno. Una persona de tu equipo confirma antes de guardar.</p></div>
+          <div class="reveal" style="--i:2"><h3>Queda todo trazado</h3><p>Lo que confirma tu equipo queda registrado en la clínica, sin digitar dos veces.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Diagnóstico ===================== -->
+    <section id="diagnostico" class="section dark" data-theme="dark" data-name="Diagnóstico" aria-labelledby="diagTitle">
+      <div class="wrap diag-grid">
+        <div>
+          <h2 class="h2 reveal" id="diagTitle">Diagnostica tu clínica.</h2>
+          <p class="lead reveal" style="--i:1">Cuéntanos cómo operas hoy y a dónde quieres llegar. Te mostramos qué conviene primero y por qué. La inversión la revisamos contigo en una demo.</p>
+        </div>
+        <div class="quiz reveal" style="--i:2" id="quiz" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ===================== Pasos ===================== -->
+    <section id="pasos" class="section blush" data-name="Cómo empezamos" aria-labelledby="pasosTitle">
+      <div class="wrap">
+        <h2 class="h2 reveal" id="pasosTitle">Cómo empezamos, en tres pasos.</h2>
+        <ol class="steps3">
+          <li class="reveal" style="--i:0"><h3>Diagnosticamos</h3><p>Vemos cómo operas hoy, qué conservas y qué conviene primero.</p></li>
+          <li class="reveal" style="--i:1"><h3>Armamos tu propuesta</h3><p>En la demo ajustamos servicios, alcance y etapas contigo.</p></li>
+          <li class="reveal" style="--i:2"><h3>Implementamos por etapas</h3><p>Cada etapa tiene su alcance y sus entregables, y se revisa antes de seguir.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section id="faq" class="section porcelain" data-name="Preguntas" aria-labelledby="faqTitle">
+      <div class="wrap faq-grid">
+        <h2 class="h2 reveal" id="faqTitle">Lo que suelen preguntar las clínicas.</h2>
+        <div class="faq reveal" style="--i:1" id="faqList">
+          <details><summary>¿Para qué tipo de clínicas es?<span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>Para clínicas de medicina estética, dermatología estética, spas médicos y consultorios con tratamientos faciales y corporales.</p></div></details>
+          <details><summary>¿Cuánto cuesta?<span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>Depende de lo que tu clínica necesite: no vendemos paquetes cerrados. Haces el diagnóstico y revisamos la inversión contigo en una demo.</p></div></details>
+          <details><summary>¿Tengo que cambiar mi expediente o mi CRM?<span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>No necesariamente. Si lo que usas funciona, lo conservas y evaluamos integrarlo. La integración depende del sistema, su API y sus permisos, y se confirma antes de prometerla.</p></div></details>
+          <details><summary>¿Pueden garantizar que ChatGPT recomiende mi clínica?<span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>No, y nadie puede. Vendemos diagnóstico, mejoras verificables y medición con un método explícito, sin prometer posiciones, fechas ni cantidad de pacientes.</p></div></details>
+          <details><summary>¿La firma digital tiene validez legal?<span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>La plataforma guarda la versión firmada, la fecha y quién firmó. No es firma digital certificada, y su validez depende de cada país: se revisa antes de usarla.</p></div></details>
+          <details><summary>¿Emite factura electrónica?<span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>Hoy no. La plataforma lleva cobros y facturas internas, que no son factura electrónica fiscal. Tu facturación electrónica se conserva en tu sistema.</p></div></details>
+          <details><summary>¿Qué ve el paciente en su app?<span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>Su Inicio con la próxima cita, Mi rutina paso a paso, Citas y tratamientos, Mi progreso con su antes y después, y la tienda de su clínica.</p></div></details>
+          <details><summary>¿Quién decide qué ve el paciente de su evolución?<span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>La clínica, desde la ficha del paciente en la consola.</p></div></details>
+          <details><summary>¿Cómo se venden productos desde la app?<span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>La clínica carga sus productos en el Catálogo. El paciente los pide en la tienda de su app y el pedido aparece en Pedidos de la app, dentro de Inventario. Es un pedido: hoy no hay pago en línea.</p></div></details>
+          <details><summary>¿Tengo que contratar toda la plataforma?<span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>No. Puedes empezar con una solución y sumar otras por etapas. Algunas dependen de otras, y la propuesta te muestra cuáles y por qué.</p></div></details>
+          <details><summary>¿El análisis facial reemplaza la valoración médica?<span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>No. El análisis facial de 468 puntos es una herramienta de apoyo para documentar y explicar proporciones. La valoración y la indicación siempre son del profesional.</p></div></details>
+          <details><summary>¿La app lleva el nombre de mi clínica?<span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>Sí. Configuramos su nombre, su logo y su catálogo en la app web. Una app propia en las tiendas es un alcance aparte. En este sitio, «Clínica Ejemplo» es un nombre ficticio.</p></div></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Demo ===================== -->
+    <section id="demo" class="section dark" data-theme="dark" data-name="Agendar una demo" aria-labelledby="demoTitle">
+      <div class="wrap demo-box">
+        <div>
+          <h2 class="h2 reveal" id="demoTitle">Agenda una demo con el flujo real de tu clínica.</h2>
+          <p class="lead reveal" style="--i:1">En 30 minutos te mostramos cómo se conecta la consola de tu clínica con la app de tus pacientes.</p>
+        </div>
+        <div class="reveal" style="--i:2">
+          <ul class="guarantees">
+            <li>30 minutos, con tu propio caso de uso</li>
+            <li>Sin compromiso ni tarjeta de crédito</li>
+            <li>Respuesta en menos de 24 horas</li>
+          </ul>
+          <div class="btn-row">
+            <a class="btn btn-primary" id="bookingBtn" href="#demo" target="_blank" rel="noopener">Elegir horario <span class="arr" aria-hidden="true">→</span></a>
+          </div>
+          <p class="booking-off" id="bookingOff" hidden>La reserva en línea se activa antes de publicar.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== Pie ===================== -->
+  <footer class="footer" data-theme="dark">
+    <div class="wrap">
+      <div class="foot-top">
+        <div>
+          <a class="logo" href="#inicio"><span class="logo-mark" aria-hidden="true"></span>Clinic Management Tech</a>
+          <p class="foot-tag">Tu clínica y tus pacientes, conectados.</p>
+        </div>
+        <nav class="foot-links" aria-label="Pie de página">
+          <a href="#soluciones">Soluciones</a>
+          <a href="#features">Consola de la clínica</a>
+          <a href="#paciente">App del paciente</a>
+          <a href="#diagnostico">Diagnóstico</a>
+          <a href="#demo">Agendar una demo</a>
+        </nav>
+      </div>
+      <p class="foot-copy">© 2026 Clinic Management Tech</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
